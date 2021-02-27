@@ -133,31 +133,12 @@
 #if HAS_WIRED_LCD
   #define BEEPER_PIN                        PC9
 
-  #if HAS_MARLINUI_U8GLIB
-    #define DOGLCD_A0                       PB14
-    #define DOGLCD_CS                       PB12
-    #define DOGLCD_SCK                      PB13
-    #define DOGLCD_MOSI                     PB15
-    //#define LCD_SCREEN_ROT_90
-    //#define LCD_SCREEN_ROT_180
-    //#define LCD_SCREEN_ROT_270
-
-    #if EITHER(FYSETC_MINI_12864, U8GLIB_ST7920)
-      #define FORCE_SOFT_SPI
-    #endif
-  #endif
-
-  #define LCD_PINS_RS                       PB12  // CS -- SOFT SPI for ENDER3 LCD
-  #define LCD_PINS_D4                       PB13  // SCLK
-  #define LCD_PINS_ENABLE                   PB15  // DATA MOSI
-
-  //#define LCD_CONTRAST_INIT                190
-
-  #if ENABLED(NEWPANEL)
-    #define BTN_EN1                         PC10
-    #define BTN_EN2                         PC11
-    #define BTN_ENC                         PC12
-  #endif
+  #define LCD_PINS_ENABLE                 PC11  
+  #define LCD_PINS_RS                     PB14  
+  #define LCD_PINS_D4                     PC10  
+  #define LCD_PINS_D5                     PB13
+  #define LCD_PINS_D6                     PB12
+  #define LCD_PINS_D7                     PB15
 #endif
 
 #if ENABLED(TOUCH_UI_FTDI_EVE)
